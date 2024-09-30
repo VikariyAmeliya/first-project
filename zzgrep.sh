@@ -22,5 +22,4 @@ tar -xzf "$filename" -C "$temp_dir"
 grep -R "$search_pattern" "$temp_dir"
 #Deleting temp directory
 rm -rf "$temp_dir"
-
 }
