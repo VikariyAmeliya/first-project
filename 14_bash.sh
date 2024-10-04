@@ -40,7 +40,6 @@ function show_help {
     echo "             Parameters -p"
     echo "         Show all processes"
     echo "                'procs'"
-    echo "  -c, --cpu             | Show CPU information"
     echo "  -k, --kill            | Kill [PID]"
     echo "  -o, --output          | Save output in file"
     echo "                                              "    
@@ -124,7 +123,7 @@ function show_la {
 # Proc function
 function show_proc {
     if [ -z "$1" ]; then
-        grep "model name" /proc/cpuinfo 
+        grep "model name" /proc/cpuinfo | uniq 
     else
         case $1 in
             procs) 
